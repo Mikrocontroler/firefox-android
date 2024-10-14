@@ -8,6 +8,8 @@ _A collection of Android libraries to build browsers or browser-like application
 
 ℹ️ For more information **[see the website](https://mozilla-mobile.github.io/android-components/)**.
 
+Lets see in what we can turn the samples-browser
+
 A fully-featured reference browser implementation based on the components can be found in the [reference-browser repository](https://github.com/mozilla-mobile/reference-browser).
 
 # Getting Involved
