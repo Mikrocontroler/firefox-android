@@ -89,6 +89,7 @@ import org.mozilla.samples.browser.autofill.AutofillSearchActivity
 import org.mozilla.samples.browser.autofill.AutofillUnlockActivity
 import org.mozilla.samples.browser.downloads.DownloadService
 import org.mozilla.samples.browser.ext.components
+import org.mozilla.samples.browser.ext.share
 import org.mozilla.samples.browser.integration.FindInPageIntegration
 import org.mozilla.samples.browser.media.MediaSessionService
 import org.mozilla.samples.browser.request.SampleUrlEncodedRequestInterceptor
@@ -316,6 +317,8 @@ open class DefaultComponents(private val applicationContext: Context) {
             },
             BrowserMenuImageText("Share", iconsR.drawable.mozac_ic_share_android_24, android.R.color.black) {
                 Toast.makeText(applicationContext, "Share", Toast.LENGTH_SHORT).show()
+                val url = store.state.selectedTab?.content?.url.orEmpty()
+                applicationContext.share(url, "Page shared")
             },
             SimpleBrowserMenuItem("Settings") {
                 Toast.makeText(applicationContext, "Settings", Toast.LENGTH_SHORT).show()
