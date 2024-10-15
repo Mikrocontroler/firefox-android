@@ -43,6 +43,10 @@ class Components(private val applicationContext: Context) : DefaultComponents(ap
                     throwable ->
                 Log.log(Log.Priority.ERROR, "SampleBrowser", throwable, "Failed to install testext")
             }
+            it.installBuiltInWebExtension("testexttabopen@mozac.org", "resource://android/assets/extensions/test2/") {
+                    throwable ->
+                Log.log(Log.Priority.ERROR, "SampleBrowser", throwable, "Failed to install testexttabopen")
+            }
             WebCompatFeature.install(it)
             WebCompatReporterFeature.install(it)
         }

@@ -66,6 +66,9 @@ tasks.register("updateBorderifyExtensionVersion", Copy) { task ->
 tasks.register("updateTestExtensionVersion", Copy) { task ->
     updateExtensionVersion(task, 'src/main/assets/extensions/test')
 }
+tasks.register("updateTestTabopenExtensionVersion", Copy) { task ->
+    updateExtensionVersion(task, 'src/main/assets/extensions/test2')
+}
 
 dependencies {
     implementation platform(ComponentsDependencies.androidx_compose_bom)
@@ -171,3 +174,4 @@ dependencies {
 
 preBuild.dependsOn updateBorderifyExtensionVersion
 preBuild.dependsOn updateTestExtensionVersion
+preBuild.dependsOn updateTestTabopenExtensionVersion
