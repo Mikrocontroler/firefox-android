@@ -124,7 +124,7 @@ class EditToolbar internal constructor(
 
             setOnDispatchKeyEventPreImeListener { event ->
                 if (event?.keyCode == KeyEvent.KEYCODE_BACK && editListener?.onCancelEditing() != false) {
-                    toolbar.displayMode()
+                    //toolbar.displayMode()
                 }
                 false
             }
