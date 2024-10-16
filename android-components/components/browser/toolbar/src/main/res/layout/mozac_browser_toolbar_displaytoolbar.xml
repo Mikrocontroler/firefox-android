@@ -8,7 +8,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="56dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent">
 
     <!-- Navigation -->
 
@@ -18,7 +19,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         mozac:actionContainerItemSize="48dp"
         tools:layout_width="48dp" />
 
@@ -33,7 +34,7 @@
         android:importantForAccessibility="no"
         app:layout_constraintEnd_toStartOf="@+id/mozac_browser_toolbar_browser_actions"
         app:layout_constraintStart_toEndOf="@+id/mozac_browser_toolbar_navigation_actions"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_goneMarginEnd="0dp" />
 
     <!-- URL indicators (lock, tracking protection, ..) -->
@@ -46,7 +47,7 @@
         android:scaleType="center"
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="@id/mozac_browser_toolbar_background"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:srcCompat="@drawable/mozac_ic_search_24"
         tools:ignore="ContentDescription" />
 
@@ -58,7 +59,7 @@
         android:scaleType="center"
         android:visibility="gone"
         app:layout_constraintStart_toEndOf="@id/mozac_browser_toolbar_empty_indicator"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:srcCompat="@drawable/mozac_ic_tracking_protection_on_no_trackers_blocked" />
 
     <ImageView
@@ -70,7 +71,7 @@
         android:scaleType="center"
         android:visibility="gone"
         app:layout_constraintStart_toEndOf="@+id/mozac_browser_toolbar_tracking_protection_indicator"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:srcCompat="@drawable/mozac_browser_toolbar_icons_vertical_separator" />
 
     <mozilla.components.browser.toolbar.display.SiteSecurityIconView
@@ -81,20 +82,20 @@
         android:contentDescription="@string/mozac_browser_toolbar_content_description_site_info"
         android:scaleType="center"
         app:layout_constraintStart_toEndOf="@+id/mozac_browser_toolbar_separator"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:srcCompat="@drawable/mozac_ic_site_security" />
 
     <mozilla.components.browser.toolbar.display.HighlightView
         android:id="@+id/mozac_browser_toolbar_permission_indicator"
         android:layout_width="10dp"
         android:layout_height="10dp"
-        android:importantForAccessibility="no"
-        app:layout_constraintBottom_toBottomOf="@+id/mozac_browser_toolbar_security_indicator"
-        app:layout_constraintEnd_toEndOf="@+id/mozac_browser_toolbar_security_indicator"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:visibility="gone"
+        android:importantForAccessibility="no"
         android:tint="@color/photonBlue40"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/mozac_browser_toolbar_security_indicator"
+        app:layout_constraintEnd_toEndOf="@+id/mozac_browser_toolbar_security_indicator"
         app:srcCompat="@drawable/mozac_dot_notification" />
 
     <!-- URL & Title -->
@@ -107,7 +108,7 @@
         android:paddingEnd="@dimen/mozac_browser_toolbar_origin_padding_end"
         app:layout_constraintEnd_toStartOf="@+id/mozac_browser_toolbar_action_separator"
         app:layout_constraintStart_toEndOf="@+id/mozac_browser_toolbar_security_indicator"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_goneMarginStart="8dp"
         app:layout_goneMarginTop="8dp" />
 
@@ -115,14 +116,14 @@
         android:id="@+id/mozac_browser_toolbar_action_separator"
         android:layout_width="@dimen/mozac_browser_toolbar_page_action_separator_width"
         android:layout_height="40dp"
-        android:layout_marginTop="8dp"
         android:layout_marginStart="8dp"
-        android:visibility="gone"
+        android:layout_marginTop="8dp"
         android:importantForAccessibility="no"
         android:scaleType="center"
-        app:layout_constraintStart_toEndOf="@+id/mozac_browser_toolbar_origin_view"
+        android:visibility="gone"
         app:layout_constraintEnd_toStartOf="@id/mozac_browser_toolbar_page_actions"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/mozac_browser_toolbar_origin_view"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <!-- Page actions -->
 
@@ -133,7 +134,7 @@
         android:layout_marginTop="4dp"
         android:scaleType="center"
         app:layout_constraintEnd_toEndOf="@+id/mozac_browser_toolbar_background"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         mozac:actionContainerItemSize="48dp"
         tools:layout_width="48dp" />
 
@@ -145,7 +146,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toStartOf="@id/mozac_browser_toolbar_menu"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         mozac:actionContainerItemSize="48dp"
         tools:layout_width="48dp" />
 
@@ -158,7 +159,7 @@
         android:layout_marginTop="4dp"
         android:background="?android:attr/selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <!-- Progress Bar -->
 
